@@ -9,7 +9,7 @@
             onAMListReceived: null,
             onAEDStatusUpdated: null,
             onNotificationsReceived: null,
-            onMessagesReceived: null,
+            onDashboardDataReceived: null,
             onMaintSaved: null
         }
     };
@@ -64,11 +64,12 @@ AGS.Model.Service.prototype = {
         }, null, null, null);
 
     },
-    getMessages: function (customerId, pageToDisplay) {
+    getDashboardData: function (customerId, pageToDisplay) {
         var _this = this;
-        this.ApiRead("Account/Messages/" + customerId, function (data) {
-            if (_this.settings.eventHandlers.onMessagesReceived) _this.settings.eventHandlers.onMessagesReceived(data, pageToDisplay);
-        }, null, null, null);
+        //this.ApiRead("Account/Messages/" + customerId, function (data) {
+       var data = true;
+       if (_this.settings.eventHandlers.onDashboardDataReceived) _this.settings.eventHandlers.onDashboardDataReceived(data, pageToDisplay);
+        //}, null, null, null);
     },
     sendFeedback: function (user, message) {
         var _this = this;

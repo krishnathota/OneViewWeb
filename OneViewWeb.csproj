@@ -358,8 +358,8 @@
     <Content Include="views\help\help.js" />
     <Content Include="views\home\home.html" />
     <Content Include="views\home\home.js" />
-    <Content Include="views\messageCenter\messageCenter.html" />
-    <Content Include="views\messageCenter\messageCenter.js" />
+    <Content Include="views\dashboard\dashboard.html" />
+    <Content Include="views\dashboard\dashboard.js" />
     <Content Include="views\trListing\trListing.html" />
     <Content Include="views\trListing\trListing.js" />
     <Content Include="Web.config" />

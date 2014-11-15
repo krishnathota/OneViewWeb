@@ -19,7 +19,7 @@
     <script src="model/common.js" type="text/javascript"></script>
     <script src="model/service.js" type="text/javascript"></script>
     <!-- View scripts -->
-    <script src="views/messageCenter/messageCenter.js" type="text/javascript"></script>
+    <script src="views/dashboard/dashboard.js" type="text/javascript"></script>
     <script src="views/aedListing/aedListing.js" type="text/javascript"></script>
     <script src="views/trListing/trListing.js" type="text/javascript"></script>
     <script src="views/feedback/feedback.js" type="text/javascript"></script>
@@ -178,8 +178,9 @@
                 <h3 class="customerTitle">
                 </h3>
                 <ul data-role="listview" data-divider-theme="d" data-inset="true">
-                    <li data-theme="d"><a href="javascript:;" class="btnMessageCenter" id="btnMessageCenter">
-                        <span class="menuIcon messageIcon"></span>Message Center </a></li>
+                    <li data-theme="d"><a href="javascript:;" class="btnDashboard" id="btnDashboard">
+    <span class="menuIcon messageIcon"></span>Dashboard
+</a></li>
                     <li data-theme="d"><a href="javascript:;" class="btnReadNYellow" id="btnReadNYellow">
                         <span class="menuIcon trainedIcon"></span>Red & Yellow </a></li>
                     <li data-theme="d"><a href="javascript:;" class="btnPortfolioProjects" id="btnPortfolioProjects"><span class="menuIcon aedIcon">
@@ -207,39 +208,63 @@
         </div>
     </div>
    
-    <!-- Message Center -->
-    <div data-role="page" id="pgMessageCenter">
+    <!-- Dashboard -->
+    <div data-role="page" id="pgDashboard">
         <div data-theme="d" data-role="header" data-position="fixed">
             <a data-role="button" data-direction="reverse" data-rel="back" data-theme="d" data-icon="back"
-                data-iconpos="left">Back </a><a data-rel="popup" data-position-to="window" data-role="button"
-                    href="#messageMenuPopup" data-icon="gear">Menu </a>
+               data-iconpos="left">Back</a><a data-rel="popup" data-position-to="window" data-role="button"
+   href="#dashboardMenuPopup" data-icon="gear">Menu</a>
             <h3>
-                Message Center
+                Dashboard
             </h3>
         </div>
-        <div id="divMsgCentercontainer" data-role="content">
+        <div id="divDashboardContainer" data-role="content">
         </div>
         <!-- NavigationMenuPopup -->
-        <div data-role="popup" id="messageMenuPopup" class="navigationMenuPopup" data-corners="true"
-            data-theme="none" data-shadow="false">
+        <div data-role="popup" id="dashboardMenuPopup" class="navigationMenuPopup" data-corners="true"
+             data-theme="none" data-shadow="false">
             <span class="MenuArrowTop"></span>
             <ul data-role="listview" data-divider-theme="b" data-inset="true">
-                <li data-theme="d" data-icon="false"><a href="javascript:;" class="lnkHomeIcon"><span
-                    class="menuIcon homeIcon"></span>Home </a></li>
-                <li data-theme="d" data-icon="false"><a href="javascript:;" class="ui-btn-active"><span
-                    class="menuIcon messageIcon"></span>Message Center </a></li>
-                <li data-theme="d" data-icon="false"><a href="javascript:;" class="btnReadNYellow">
-                    <span class="menuIcon trainedIcon"></span>Red & Yellow </a></li>
-                <li data-theme="d" data-icon="false"><a href="javascript:;" class="btnPortfolioProjects"><span
-                    class="menuIcon aedIcon"></span>AEDs </a></li>
-                <li data-theme="d" data-icon="false"><a href="javascript:;" class="btnAssociatedProjects"><span
-                    class="menuIcon maintenanceIcon"></span>AED Maintenance </a></li>
-                <li data-theme="d" data-icon="false"><a href="javascript:;" class="btnFeedback"><span
-                    class="menuIcon feedbackIcon"></span>Feedback </a></li>
-                <li data-theme="d" data-icon="false"><a href="javascript:;" class="btnHelp"><span
-                    class="menuIcon helpIcon"></span>Help </a></li>
-                <li data-theme="d" data-icon="false"><a href="javascript:;" class="btnLogout"><span
-                    class="menuIcon logoutIcon"></span>Logout </a></li>
+                <li data-theme="d" data-icon="false">
+                    <a href="javascript:;" class="lnkHomeIcon">
+                        <span class="menuIcon homeIcon"></span>Home
+                    </a>
+                </li>
+                <li data-theme="d" data-icon="false">
+                    <a href="javascript:;" class="ui-btn-active">
+                        <span class="menuIcon messageIcon"></span>Dashboard
+                    </a>
+                </li>
+                <li data-theme="d" data-icon="false">
+                    <a href="javascript:;" class="btnReadNYellow">
+                        <span class="menuIcon trainedIcon"></span>Red & Yellow
+                    </a>
+                </li>
+                <li data-theme="d" data-icon="false">
+                    <a href="javascript:;" class="btnPortfolioProjects">
+                        <span class="menuIcon aedIcon"></span>AEDs
+                    </a>
+                </li>
+                <li data-theme="d" data-icon="false">
+                    <a href="javascript:;" class="btnAssociatedProjects">
+                        <span class="menuIcon maintenanceIcon"></span>AED Maintenance
+                    </a>
+                </li>
+                <li data-theme="d" data-icon="false">
+                    <a href="javascript:;" class="btnFeedback">
+                        <span class="menuIcon feedbackIcon"></span>Feedback
+                    </a>
+                </li>
+                <li data-theme="d" data-icon="false">
+                    <a href="javascript:;" class="btnHelp">
+                        <span class="menuIcon helpIcon"></span>Help
+                    </a>
+                </li>
+                <li data-theme="d" data-icon="false">
+                    <a href="javascript:;" class="btnLogout">
+                        <span class="menuIcon logoutIcon"></span>Logout
+                    </a>
+                </li>
             </ul>
             <div class="clear">
             </div>
@@ -273,8 +298,8 @@
                     </a>
                 </li>
                 <li data-theme="d" data-icon="false">
-                    <a href="javascript:;" class="btnMessageCenter">
-                        <span class="menuIcon messageIcon"></span>Message Center
+                    <a href="javascript:;" class="btnDashboard">
+                        <span class="menuIcon messageIcon"></span>Dashboard
                     </a>
                 </li>
                 <li data-theme="d" data-icon="false">
@@ -339,7 +364,7 @@
                 </li>
                 <li data-theme="d" data-icon="false">
                     <a href="javascript:;" class="ui-btn-active">
-                        <span class="menuIcon messageIcon"></span>Message Center
+                        <span class="menuIcon messageIcon"></span>Dashboard
                     </a>
                 </li>
                 <li data-theme="d" data-icon="false">
@@ -403,7 +428,7 @@
                 </li>
                 <li data-theme="d" data-icon="false">
                     <a href="javascript:;" class="ui-btn-active">
-                        <span class="menuIcon messageIcon"></span>Message Center
+                        <span class="menuIcon messageIcon"></span>Dashboard
                     </a>
                 </li>
                 <li data-theme="d" data-icon="false">
@@ -468,7 +493,7 @@
                 </li>
                 <li data-theme="d" data-icon="false">
                     <a href="javascript:;" class="ui-btn-active">
-                        <span class="menuIcon messageIcon"></span>Message Center
+                        <span class="menuIcon messageIcon"></span>Dashboard
                     </a>
                 </li>
                 <li data-theme="d" data-icon="false">
@@ -533,7 +558,7 @@
                 </li>
                 <li data-theme="d" data-icon="false">
                     <a href="javascript:;" class="ui-btn-active">
-                        <span class="menuIcon messageIcon"></span>Message Center
+                        <span class="menuIcon messageIcon"></span>Dashboard
                     </a>
                 </li>
                 <li data-theme="d" data-icon="false">

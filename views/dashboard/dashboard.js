@@ -1,4 +1,4 @@
-﻿AGS.Views.MessageCenter = function (options) {
+﻿AGS.Views.Dashboard = function (options) {
     var defaults = {
         containerSelector: null,
         eventHandlers: {
@@ -11,18 +11,19 @@
 
     this.tm = new TemplateManager({
         templateName: 'MsgCenter',
-        templateUri: 'js/views/messageCenter/messageCenter.html',
+        templateUri: '/views/dashboard/dashboard.html',
         parameters: [],
         containerElement: this.options.containerSelector,
         eventHandlers: { onRendered: function () { _this.onRendered(); } }
     });
 };
 
-AGS.Views.MessageCenter.prototype = {
+AGS.Views.Dashboard.prototype = {
     setData: function (data) {
-        data.RecertificationDate = data.CertifiedDate.add("M", data.CertificationDurationInMonths);
+        /*data.RecertificationDate = data.CertifiedDate.add("M", data.CertificationDurationInMonths);
         data.RecertificationDate.setDate(data.RecertificationDate.getDate() - 1);
         data.MaintananceNextDate = new Date(data.MaintananceNextDate);
+        */
         this.tm.Render(data, this);
     },
 

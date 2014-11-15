@@ -37,8 +37,8 @@ AGS.Presenters.MainPage.prototype = {
                 _this.setHomePageData(customerData);
             }
         });
-        $(".btnMessageCenter").click(function () {
-            _this.onMessageCenterClicked();
+        $(".btnDashboard").click(function () {
+            _this.onDashboardClicked();
         });
         $(".btnTrainedResponders").click(function () {
             _this.onTrainedRespondersClicked();
@@ -76,11 +76,11 @@ AGS.Presenters.MainPage.prototype = {
     },
     initViews: function () {
         var _this = this;
-        this.Views.MessageCenter = new AGS.Views.MessageCenter({
-            containerSelector: "#divMsgCentercontainer",
+        this.Views.Dashboard = new AGS.Views.Dashboard({
+            containerSelector: "#divDashboardContainer",
             eventHandlers: {
                 rendered: function () {
-                    _this.onMCPageRendered();
+                    _this.onDashboardPageRendered();
                 }
             }
         });
@@ -145,7 +145,7 @@ AGS.Presenters.MainPage.prototype = {
         eventHandlers.onTrainedRespondersReceived = function (data) { _this.onTrainedRespondersReceived(data); };
         eventHandlers.onAEDsReceived = function (data) { _this.onAEDsReceived(data); };
         eventHandlers.onAMListReceived = function (data) { _this.onAMListReceived(data); };
-        eventHandlers.onMessagesReceived = function (data, pageToDisplay) { _this.onMessagesReceived(data, pageToDisplay); };
+        eventHandlers.onDashboardDataReceived = function (data, pageToDisplay) { _this.onDashboardDataReceived(data, pageToDisplay); };
         eventHandlers.onMaintSaved = function (data) { _this.onMaintSaved(data); };
         eventHandlers.onFeedbackSaved = function () { _this.onFeedbackSaved(); };
         eventHandlers.onTermsConditionsReceived = function (data) { _this.onTermsConditionDataReceived(data); };
@@ -183,18 +183,18 @@ AGS.Presenters.MainPage.prototype = {
         $.mobile.changePage("#pgHome");
         $.mobile.loading('hide');
     },
-    onMessageCenterClicked: function () {
+    onDashboardClicked: function () {
         $.mobile.loading('show', {
             text: 'Loading',
             textVisible: true,
             theme: 'a',
             html: ""
         });
-        this.getMessages("msgcenter");
+        this.getDashboardData("pgDashboard");
     },
-    getMessages: function (pageToDisplay) {
-        var customerData = JSON.parse(localStorage.getItem("customerData"));
-        this.Model.getMessages(customerData.UserCustomer.Id, pageToDisplay);
+    getDashboardData: function (pageToDisplay) {
+        //var customerData = JSON.parse(localStorage.getItem("customerData"));
+        this.Model.getDashboardData(null, null);
     },
     onTrainedRespondersClicked: function () {
         $.mobile.loading('show', {
@@ -248,8 +248,8 @@ AGS.Presenters.MainPage.prototype = {
         });
         this.getMessages("help");
     },
-    onMCPageRendered: function (data) {
-        $.mobile.changePage("#pgMessageCenter");
+    onDashboardPageRendered: function (data) {
+        $.mobile.changePage("#pgDashboard");
         $.mobile.loading('hide');
     },
     onTrainedRespondersReceived: function (data) {
@@ -317,13 +317,14 @@ AGS.Presenters.MainPage.prototype = {
         alert("Feedback submitted", null, "Feedback", "OK");
         this.Views.Feedback.reset();
     },
-    onMessagesReceived: function (data, pageToDisplay) {
-        if (pageToDisplay == "msgcenter") {
-            this.Views.MessageCenter.setData(data);
-        }
-        if (pageToDisplay == "help") {
-            this.Views.Help.setData(data);
-        }
+    onDashboardDataReceived: function (data, pageToDisplay) {
+        //if (pageToDisplay == "msgcenter") {
+        //    this.Views.dashboard.setData(data);
+        //}
+        //if (pageToDisplay == "help") {
+        //    this.Views.Help.setData(data);
+        //}
+        this.Views.Dashboard.setData(data);
     },
     onAEDsPageRendered: function () {
         $.mobile.loading('hide');
