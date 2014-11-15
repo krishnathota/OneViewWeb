@@ -1,0 +1,12 @@
+D:\GitHub\OneViewWeb\InsideViewWeb\bin\OneViewWeb.dll.config
+D:\GitHub\OneViewWeb\InsideViewWeb\bin\OneViewWeb.dll
+D:\GitHub\OneViewWeb\InsideViewWeb\bin\OneViewWeb.pdb
+D:\GitHub\OneViewWeb\InsideViewWeb\obj\Debug\OneViewWeb.csprojResolveAssemblyReference.cache
+D:\GitHub\OneViewWeb\InsideViewWeb\obj\Debug\OneViewWeb.dll
+D:\GitHub\OneViewWeb\InsideViewWeb\obj\Debug\OneViewWeb.pdb
+D:\GitHub\OneViewWeb\OneViewWeb\bin\OneViewWeb.dll.config
+D:\GitHub\OneViewWeb\OneViewWeb\bin\OneViewWeb.dll
+D:\GitHub\OneViewWeb\OneViewWeb\bin\OneViewWeb.pdb
+D:\GitHub\OneViewWeb\OneViewWeb\obj\Debug\OneViewWeb.csprojResolveAssemblyReference.cache
+D:\GitHub\OneViewWeb\OneViewWeb\obj\Debug\OneViewWeb.dll
+D:\GitHub\OneViewWeb\OneViewWeb\obj\Debug\OneViewWeb.pdb

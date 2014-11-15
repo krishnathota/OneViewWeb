@@ -1,0 +1,5 @@
+D:\GitHub\InsideViewWeb\InsideViewWeb\bin\InsideViewWeb.dll.config
+D:\GitHub\InsideViewWeb\InsideViewWeb\bin\InsideViewWeb.dll
+D:\GitHub\InsideViewWeb\InsideViewWeb\bin\InsideViewWeb.pdb
+D:\GitHub\InsideViewWeb\InsideViewWeb\obj\Debug\InsideViewWeb.dll
+D:\GitHub\InsideViewWeb\InsideViewWeb\obj\Debug\InsideViewWeb.pdb
